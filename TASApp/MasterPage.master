@@ -1,0 +1,178 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+     body {
+	margin:0;
+	padding:0;
+}
+           .style1 {
+            width: 1000px;
+        }
+         /* Container workarounds for Mac Gecko scrollbar issues */
+                .yui-panel-container.hide-scrollbars #dt-dlg .bd {
+                    /* Hide scrollbars by default for Gecko on OS X */
+                    overflow: hidden;
+                }
+
+                .yui-panel-container.show-scrollbars #dt-dlg .bd {
+                    /* Show scrollbars for Gecko on OS X when the Panel is visible  */
+                    overflow: auto;
+                }
+
+                #dt-dlg_c .underlay {
+                    overflow: hidden;
+                }
+
+
+
+                /* rounded corners */
+                #dt-dlg .corner_tr {
+                  
+                    position: absolute;
+                    background-repeat: no-repeat;
+                    top: -1px;
+                    right: -1px;
+                    height: 4px;
+                    width: 4px;
+                }
+
+                #dt-dlg .corner_tl {
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    top: -1px;
+                    left: -1px;
+                    height: 4px;
+                    width: 4px;
+                }
+
+                #dt-dlg .corner_br {
+                    position: absolute;
+                    background-repeat: no-repeat;
+                    bottom: -1px;
+                    right: -1px;
+                    height: 4px;
+                    width: 4px;
+                }
+
+                #dt-dlg .corner_bl {
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    bottom: -1px;
+                    left: -1px;
+                    height: 4px;
+                    width: 4px;
+                }
+
+                .inprogress {
+                    position: absolute;
+                }
+                /* transitional progressive enhancement state */
+                .savefrm {
+                    background-color: #F2F2F2;
+                    border:solid 1px #E1E1E1;
+                }
+
+                .savefrm table {
+                    margin-left:5px;
+                }
+
+                .savefrm tr, td {
+                   margin:10px;
+                }
+                .savefrm td {
+                    width:290px;
+                }
+        .log
+        {
+            color:orange;
+            text-align:center; margin-left:400px;
+        }
+        /* custom styles for inline instances */
+        .yui-skin-sam .yui-ac-input
+        {
+            position: static;
+            width: 20em;
+            vertical-align: middle;
+        }
+
+        .yui-skin-sam .yui-ac-container
+        {
+            width: 20em;
+            left: 0px;
+        }
+
+        /* needed for stacked instances for ie & sf z-index bug of absolute inside relative els */
+       
+
+        
+
+        /* buttons */
+        .yui-ac .yui-button
+        {
+            vertical-align: middle;
+        }
+        .autocomplete {
+    width:14em; /* set width here or else widget will expand to fit its container */
+    padding-bottom:2em;
+}
+    </style>
+    <link href="stylesheets/autocomplete.css" rel="stylesheet" />
+   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/fonts/fonts-min.css" />
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/paginator/assets/skins/sam/paginator.css" />
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/datatable/assets/skins/sam/datatable.css" />
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/button/assets/skins/sam/button.css" />
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/container/assets/skins/sam/container.css" />
+ <%--   <link href="stylesheets/fonts-min.css" rel="stylesheet" />
+    <link href="stylesheets/button.css" rel="stylesheet" />
+    <link href="stylesheets/container.css" rel="stylesheet" />
+    <link href="stylesheets/datatable.css" rel="stylesheet" />
+    <link href="stylesheets/autocomplete.css" rel="stylesheet" />
+    <link href="stylesheets/paginator.css" rel="stylesheet" />--%>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table align="center" class="style1">
+            <tr>
+                <td align="left" >
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#E3EAEB" Width="100%"
+                        DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
+                        ForeColor="#666666" Orientation="Horizontal" StaticSubMenuIndent="10px" Height="28px">
+                        <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#E3EAEB" />
+                        <DynamicSelectedStyle BackColor="#1C5E55" />
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Users/Towers.aspx" Text="TowersInfo" Value="TowersInfo">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/AdminPanel.aspx" Text="Admin Panel" 
+                                Value="Admin Panel"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/ManageTowers.aspx" Text="Mange Towers" 
+                                Value="Mange Towers"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticSelectedStyle BackColor="#1C5E55" />
+                    </asp:Menu>
+                    </td>
+                <td>
+                    <asp:LoginName ID="LoginName1" runat="server" />
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td align ="center" valign ="middle" colspan ="2" class="yui-skin-sam">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                   
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

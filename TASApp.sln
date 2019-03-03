@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TASApp", "TASApp\", "{CAF7C99D-A7B3-4B43-9DE5-21985BC70EA1}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52382"
+		Debug.AspNetCompiler.PhysicalPath = "D:\3. Documents\Documents Sai Chandra\Documents\Telecom\TASApp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52382\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52382"
+		Release.AspNetCompiler.PhysicalPath = "D:\3. Documents\Documents Sai Chandra\Documents\Telecom\TASApp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52382\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52382"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAF7C99D-A7B3-4B43-9DE5-21985BC70EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF7C99D-A7B3-4B43-9DE5-21985BC70EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E92CA38-2299-4329-B274-4D7787EFE6C6}
+	EndGlobalSection
+EndGlobal
